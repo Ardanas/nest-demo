@@ -2,6 +2,21 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type LibraryModel {
+  id: String!
+  name: String!
+  books: BookModel!
+}
+
+type BookModel {
+  id: String!
+  name: String!
+  lib: String!
+  author: Float!
+}
+
 type Query {
   getHello: String!
+  libs: [LibraryModel!]!
+  lib(id: String!): LibraryModel!
 }
